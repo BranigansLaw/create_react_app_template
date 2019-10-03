@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+I've modified it to add some default libraries in react such as:
+
+- Redux
+- AppThunk
+- redux-forms
+- connected-react-router
+- react-router
+- Google Materials UI
+
 ## Available Scripts
 
 In the project directory, you can run:

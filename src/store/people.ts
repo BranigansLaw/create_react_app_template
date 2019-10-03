@@ -1,6 +1,7 @@
 import { Action, ActionCreator, Dispatch, Reducer, combineReducers, createStore, applyMiddleware, Store } from 'redux';
 import thunk from 'redux-thunk';
 import { ThunkAction } from 'redux-thunk';
+import { neverReached } from '.';
 
 // Store
 export interface IPerson {
@@ -9,14 +10,10 @@ export interface IPerson {
     age: number;
 }
 
-interface IPeopleState {
+export interface IPeopleState {
     readonly people: IPerson[];
     readonly loading: boolean;
     readonly posting: boolean;
-}
-
-export interface IAppState {
-    readonly peopleState: IPeopleState;
 }
 
 const initialPeopleState: IPeopleState = {
@@ -127,7 +124,7 @@ export const postPersonActionCreator: ActionCreator<
 };
 
 // Reducers
-const peopleReducer: Reducer<IPeopleState, PeopleActions> = (
+export const peopleReducer: Reducer<IPeopleState, PeopleActions> = (
     state = initialPeopleState,
     action,
   ) => {
@@ -163,15 +160,4 @@ const peopleReducer: Reducer<IPeopleState, PeopleActions> = (
         neverReached(action); // when a new action is created, this helps us remember to handle it in the reducer
     }
     return state;
-  };
-  
-  // tslint:disable-next-line:no-empty
-  const neverReached = (never: never) => {};
-  
-  const rootReducer = combineReducers<IAppState>({ peopleState: peopleReducer });
-
-export function configureStore(): Store<IAppState> {
-    // This line is suspect, not sure if this is the middleware required
-    const store = createStore(rootReducer, undefined, applyMiddleware(thunk));
-    return store;
-}
+};

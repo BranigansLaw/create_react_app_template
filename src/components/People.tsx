@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { IPerson, IGotPeopleAction, IPostPerson, IPostedPersonAction, IAppState, getPeopleActionCreator, postPersonActionCreator, configureStore } from './store/store';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
-import { connect, Provider } from 'react-redux';
+import { connect } from 'react-redux';
+import { IGotPeopleAction, IPerson, IPostPerson, IPostedPersonAction, getPeopleActionCreator, postPersonActionCreator } from '../store/people';
+import { IAppState } from '../store';
 
 interface IProps {
     getPeople: () => Promise<IGotPeopleAction>;
