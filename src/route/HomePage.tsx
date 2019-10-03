@@ -1,7 +1,6 @@
 import React from 'react';
 import { WithStyles, createStyles, withStyles } from '@material-ui/styles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
-import logo from '../logo.svg';
 import { ThunkDispatch } from 'redux-thunk';
 import { push } from 'connected-react-router';
 import { AnyAction } from 'redux';
@@ -10,8 +9,6 @@ import { Button } from '@material-ui/core';
 
 const styles = (theme: Theme) => createStyles({
     root: {
-        flexGrow: 1,
-        height: '100%',
     },
 });
 
@@ -25,13 +22,21 @@ const HomePage: React.FC<IProps> = ({
 }) => {
     return (
         <div className={classes.root}>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <Button onClick={() => push('/people')}>Go to People</Button>
-            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
+            <div>
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    onClick={() => push('/people')}>
+                        Go to People
+                </Button>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis nulla vel sem mollis sodales. Etiam ut eros iaculis, placerat massa et, hendrerit libero. Maecenas sed luctus nisi. Nunc malesuada rutrum enim sit amet maximus. Quisque vehicula augue nec luctus finibus. In et facilisis libero. Sed gravida feugiat metus non fermentum. Nam viverra purus eget feugiat egestas. Proin ligula metus, finibus in purus id, commodo pretium nulla.</p>
         </div>
     );
 }

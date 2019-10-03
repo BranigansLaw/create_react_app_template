@@ -126,36 +126,35 @@ export const postPersonActionCreator: ActionCreator<
 export const peopleReducer: Reducer<IPeopleState, PeopleActions> = (
     state = initialPeopleState,
     action,
-  ) => {
-    debugger;
+) => {
     switch (action.type) {
-      case 'GettingPeople': {
-        return {
-          ...state,
-          loading: true,
-        };
-      }
-      case 'GotPeople': {
-        return {
-          ...state,
-          people: action.people,
-          loading: false,
-        };
-      }
-      case 'PostingPerson': {
-        return {
-          ...state,
-          posting: true,
-        };
-      }
-      case 'PostedPerson': {
-        return {
-          ...state,
-          posting: false,
-          people: state.people.concat(action.result.person),
-        };
-      }
-      default:
+        case 'GettingPeople': {   
+            return {
+                ...state,
+                loading: true,
+            };
+        }
+        case 'GotPeople': {
+            return {
+                ...state,
+                people: action.people,
+                loading: false,
+            };
+        }
+        case 'PostingPerson': {
+            return {
+                ...state,
+                posting: true,
+            };
+        }
+        case 'PostedPerson': {
+            return {
+                ...state,
+                posting: false,
+                people: state.people.concat(action.result.person),
+            };
+        }
+        default:
         neverReached(action); // when a new action is created, this helps us remember to handle it in the reducer
     }
     return state;
