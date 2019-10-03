@@ -1,5 +1,4 @@
-import { Action, ActionCreator, Dispatch, Reducer, combineReducers, createStore, applyMiddleware, Store } from 'redux';
-import thunk from 'redux-thunk';
+import { Action, ActionCreator, Dispatch, Reducer } from 'redux';
 import { ThunkAction } from 'redux-thunk';
 import { neverReached } from '.';
 

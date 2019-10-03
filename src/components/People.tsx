@@ -22,7 +22,7 @@ interface IProps {
   }) => {
     React.useEffect(() => {
       getPeople();
-    }, []);
+    }, [getPeople]);
   
     const handleClick = () => {
       postPerson({
